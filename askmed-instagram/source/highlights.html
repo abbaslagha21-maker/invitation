@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --sky: #63B8F7; --green: #5BB52C; --soft: #CFE3FA; --ink: #0A2F72; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  body { display: block; }
+  .frame {
+    position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    font-family: 'Alexandria', sans-serif; color: #fff;
+    background: radial-gradient(circle at 50% 50%, #12356f 0%, #0b2558 38%, #071a45 75%);
+  }
+  /* cover: icon centred in the circle Instagram crops */
+  .cover .disc {
+    position: absolute; left: 50%; top: 50%; width: 760px; height: 760px; margin: -380px 0 0 -380px;
+    border-radius: 50%; border: 6px solid rgba(99,184,247,0.35);
+  }
+  .cover .glyph { position: absolute; left: 50%; top: 50%; width: 440px; height: 440px; margin: -220px 0 0 -220px; }
+  .cover .glyph svg, .story .badge svg { width: 100%; height: 100%; display: block; }
+  .cover img.glyph { object-fit: contain; }
+
+  /* story: same badge on top, then the info */
+  .story .badge {
+    position: absolute; left: 50%; top: 290px; width: 280px; height: 280px; margin-left: -140px;
+    border-radius: 50%; border: 5px solid rgba(99,184,247,0.35);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .story .badge > * { width: 160px; height: 160px; }
+  .story .badge img { object-fit: contain; }
+  .story .body {
+    position: absolute; left: 90px; right: 90px; top: 630px;
+    display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px;
+  }
+  .story h1 { margin: 0; font-size: 92px; font-weight: 900; line-height: 1.45; white-space: nowrap; }
+  .story h1 .acc { color: var(--sky); }
+  .story .rule { width: 110px; height: 8px; border-radius: 4px; background: var(--green); }
+  .story p { margin: 0; font-size: 46px; font-weight: 500; line-height: 1.7; }
+  .story p.small { font-size: 38px; color: var(--soft); }
+  .story ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; align-items: stretch; width: 100%; }
+  .story li {
+    display: flex; align-items: center; gap: 26px; justify-content: flex-start;
+    background: rgba(255,255,255,0.07); border-radius: 26px; padding: 20px 34px;
+    font-size: 44px; font-weight: 600; line-height: 1.45; text-align: right;
+  }
+  .story li .n {
+    flex: 0 0 auto; width: 70px; height: 70px; border-radius: 50%; background: var(--sky); color: var(--ink);
+    display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 900;
+  }
+  .story li .d { flex: 0 0 auto; width: 20px; height: 20px; border-radius: 50%; background: var(--green); }
+  .pill {
+    display: inline-flex; align-items: center; gap: 18px; background: #fff; color: var(--ink);
+    border-radius: 999px; padding: 22px 44px; font-size: 46px; font-weight: 800;
+  }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .foot {
+    position: absolute; left: 0; right: 0; bottom: 250px;
+    display: flex; justify-content: center; align-items: center; gap: 18px;
+  }
+  .foot img.i { height: 84px; }
+  .foot img.w { height: 54px; }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; display: flex; direction: ltr; }
+  .stripe div { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- ============ ICON SET (reused) ============ -->
+<template id="icons"></template>
+
+<!-- 1 · مين نحنا -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <img class="glyph" src="assets/icon-white.png" alt="">
+</div>
+<!-- 2 · المنتجات -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <div class="glyph"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 22h38l-3.2 32.5a2 2 0 0 1-2 1.8H18.2a2 2 0 0 1-2-1.8z"/><path d="M24 26v-7a8 8 0 0 1 16 0v7"/><path d="M27 40l4 4 7-8" stroke="#5BB52C"/></svg></div>
+</div>
+<!-- 3 · اسألنا -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <div class="glyph"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12h40a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H30l-11 9v-9h-7a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z"/><path d="M27 23.5a5 5 0 1 1 7.2 4.5c-1.4.7-2.2 1.8-2.2 3.3v1" stroke="#63B8F7"/><circle cx="32" cy="36.6" r="0.6" fill="#63B8F7" stroke="#63B8F7" stroke-width="2.6"/></svg></div>
+</div>
+<!-- 4 · القياسات -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <div class="glyph"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 44L44 8l12 12-36 36z"/><path d="M16.2 35.8l5 5M27.2 24.8l5 5M38.2 13.8l5 5" stroke="#5BB52C"/><path d="M21.7 30.3l3 3M32.7 19.3l3 3" stroke="#63B8F7"/></svg></div>
+</div>
+<!-- 5 · التوصيل -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <div class="glyph"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 17h31v26H6z"/><path d="M37 25h10.5L56 34v9H37"/><circle cx="17" cy="45" r="5" fill="#071a45"/><circle cx="46" cy="45" r="5" fill="#071a45"/><path d="M13 26h12M13 32h8" stroke="#63B8F7"/></svg></div>
+</div>
+<!-- 6 · وين نحنا -->
+<div class="frame cover">
+  <div class="disc"></div>
+  <div class="glyph"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 57S15 41.5 15 27.5a17 17 0 0 1 34 0C49 41.5 32 57 32 57z"/><circle cx="32" cy="27" r="6.5" stroke="#5BB52C"/></svg></div>
+</div>
+
+<!-- ============ STORIES ============ -->
+
+<!-- 1 · مين نحنا -->
+<div class="frame story">
+  <div class="badge"><img src="assets/icon-white.png" alt=""></div>
+  <div class="body">
+    <h1>مين <span class="acc ltr">AskMed</span>؟</h1>
+    <div class="rule"></div>
+    <p>من 2006 مع دكاترة الشمال<br>بغرفة العمليات.</p>
+    <p>ومعك بالبيت كمان: مشدّات ومخدّات<br>طبية للتعافي، وناس بتعرف تنصحك.</p>
+    <p class="small">صاحب العيلة اللي بيفهم بالعظم.</p>
+  </div>
+  <div class="foot"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+<!-- 2 · المنتجات -->
+<div class="frame story">
+  <div class="badge"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 22h38l-3.2 32.5a2 2 0 0 1-2 1.8H18.2a2 2 0 0 1-2-1.8z"/><path d="M24 26v-7a8 8 0 0 1 16 0v7"/><path d="M27 40l4 4 7-8" stroke="#5BB52C"/></svg></div>
+  <div class="body">
+    <h1>شو <span class="acc">عنّا؟</span></h1>
+    <div class="rule"></div>
+    <ul>
+      <li><span class="d"></span><span>الرقبة</span></li>
+      <li><span class="d"></span><span>الضهر والعمود الفقري</span></li>
+      <li><span class="d"></span><span>من الكتف لليد</span></li>
+      <li><span class="d"></span><span>الرجل والساق</span></li>
+      <li><span class="d"></span><span>مخدّات وفرشات طبية</span></li>
+    </ul>
+    <div class="pill"><span>كل المنتجات عـ</span><span class="ltr">askmedlb.com</span></div>
+  </div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+<!-- 3 · اسألنا -->
+<div class="frame story">
+  <div class="badge"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12h40a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H30l-11 9v-9h-7a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z"/><path d="M27 23.5a5 5 0 1 1 7.2 4.5c-1.4.7-2.2 1.8-2.2 3.3v1" stroke="#63B8F7"/><circle cx="32" cy="36.6" r="0.6" fill="#63B8F7" stroke="#63B8F7" stroke-width="2.6"/></svg></div>
+  <div class="body">
+    <h1>اسأل <span class="acc ltr">AskMed</span></h1>
+    <div class="rule"></div>
+    <p>عندك سؤال عن عملية عظم، كسر،<br>أو شو بتحتاج بعد العملية؟</p>
+    <p>ابعتلنا عالواتساب، ومنجاوبك<br>بوضوح وبلا تخويف.</p>
+    <div class="pill"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3f9a35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span class="ltr">+961 76 103 507</span></div>
+    <p class="small">الجواب للتوعية، ودكتورك بيقرّر شو المناسب إلك.</p>
+  </div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+<!-- 4 · القياسات -->
+<div class="frame story">
+  <div class="badge"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 44L44 8l12 12-36 36z"/><path d="M16.2 35.8l5 5M27.2 24.8l5 5M38.2 13.8l5 5" stroke="#5BB52C"/><path d="M21.7 30.3l3 3M32.7 19.3l3 3" stroke="#63B8F7"/></svg></div>
+  <div class="body">
+    <h1>كيف تعرف <span class="acc">قياسك؟</span></h1>
+    <div class="rule"></div>
+    <ul>
+      <li><span class="n">1</span><span>جيب شريط قياس طري</span></li>
+      <li><span class="n">2</span><span>قيس بالـ <span class="ltr">cm</span> متل ما بيقلّك الدليل</span></li>
+      <li><span class="n">3</span><span>ابعتلنا الرقم عالواتساب</span></li>
+    </ul>
+    <div class="pill"><span>الدليل كامل:</span><span class="ltr">askmedlb.com/guide</span></div>
+  </div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+<!-- 5 · التوصيل -->
+<div class="frame story">
+  <div class="badge"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 17h31v26H6z"/><path d="M37 25h10.5L56 34v9H37"/><circle cx="17" cy="45" r="5" fill="#0b2558"/><circle cx="46" cy="45" r="5" fill="#0b2558"/><path d="M13 26h12M13 32h8" stroke="#63B8F7"/></svg></div>
+  <div class="body">
+    <h1>التوصيل <span class="acc">والدفع</span></h1>
+    <div class="rule"></div>
+    <ul>
+      <li><span class="d"></span><span>توصيل لكل لبنان بـ <span class="ltr">3$</span></span></li>
+      <li><span class="d"></span><span>مجاني فوق الـ <span class="ltr">50$</span></span></li>
+      <li><span class="d"></span><span>بتدفع كاش بس يوصلك الطلب</span></li>
+      <li><span class="d"></span><span>تبديل خلال 7 أيام إذا القياس ما زبط</span></li>
+    </ul>
+  </div>
+  <div class="foot"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+<!-- 6 · وين نحنا -->
+<div class="frame story">
+  <div class="badge"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 57S15 41.5 15 27.5a17 17 0 0 1 34 0C49 41.5 32 57 32 57z"/><circle cx="32" cy="27" r="6.5" stroke="#5BB52C"/></svg></div>
+  <div class="body">
+    <h1>وين <span class="acc">نحنا؟</span></h1>
+    <div class="rule"></div>
+    <p>طرابلس، أبي سمرا، المنار</p>
+    <p>من 8 الصبح لـ 4:30 بعد الضهر</p>
+    <div class="pill"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3f9a35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span class="ltr">+961 76 103 507</span></div>
+    <p class="small ltr">askmedlb.com</p>
+  </div>
+  <div class="foot"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+  <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+</div>
+
+</body>
+</html>

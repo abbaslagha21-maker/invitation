@@ -1,0 +1,67 @@
+# AskMed Instagram: pinned posts و highlights
+
+`preview.jpg` بيفرجيك شكل الصفحة بعد ما تنزّل كل شي.
+
+## الـ 3 pinned posts
+
+الـ 3 صور هنّي صورة وحدة عريضة مقسومة عـ 3، وبتنقرا: «اسأل Askmed». كل وحدة 1080×1440 (3:4).
+
+نزّلهن بهالترتيب، وبعد كل post اعملو **Pin to profile**:
+
+1. `pinned/post-1_right.jpg` («اسأل» مع الجسم الماشي)
+2. `pinned/post-2_middle.jpg` («med» وشو منقدّم)
+3. `pinned/post-3_left.jpg` («Ask» وعندك سؤال)
+
+- آخر post بتعملو pin بيطلع أوّل واحد عالشمال، فهيك بيركبوا صح. إذا طلع الترتيب غلط: اعمل Unpin للـ 3، ورجاع اعمل pin بالترتيب 1، 2، 3.
+- وقت التنزيل اختار الـ crop **3:4** (مش 1:1)، لحتى تبيّن الصورة كاملة وما تنقصّ الكلمة بالنص.
+
+### Captions
+
+**Post 1 (اسأل)**
+
+> اسأل AskMed 👋
+> من 2006 مع دكاترة الشمال بغرفة العمليات، ومعك لحدّ ما ترجع تمشي.
+> Since 2006, with North Lebanon's surgeons in the operating room, and with you all the way to recovery.
+> 💬 واتساب: +961 76 103 507
+
+**Post 2 (شو منقدّم)**
+
+> شو منقدّم؟
+> • مع دكاترة الشمال بغرفة العمليات
+> • مشدّات ومخدّات طبية للتعافي بالبيت
+> • توصيل لكل لبنان، والدفع عند الاستلام
+> Orthopaedic supports and recovery products, delivered across Lebanon → askmedlb.com
+
+**Post 3 (عندك سؤال)**
+
+> عندك سؤال عن عملية عظم، كسر، أو شو بتحتاج بعدها؟ ابعتلنا عالواتساب ومنجاوبك ببساطة.
+> دكتورك بيقرّر، ونحنا معك بكل خطوة.
+> Got a question? Message us on WhatsApp: +961 76 103 507
+
+Hashtags بآخر كل caption: `#Lebanon #Tripoli #OrthopedicSupport #لبنان #طرابلس`
+
+## الـ highlights
+
+لكل highlight في صورتين: الـ story (`highlights/stories`) والـ cover (`highlights/covers`).
+
+| # | اسم الـ highlight | الملف |
+|---|---|---|
+| 1 | مين نحنا | `1-min-nehna.jpg` |
+| 2 | المنتجات | `2-el-montajet.jpg` |
+| 3 | اسألنا | `3-is2alna.jpg` |
+| 4 | القياسات | `4-el-2iyesat.jpg` |
+| 5 | التوصيل | `5-el-tawsil.jpg` |
+| 6 | وين نحنا | `6-wen-nehna.jpg` |
+
+لكل واحد:
+
+1. نزّل الصورة من `stories` كـ story.
+2. من الـ story كبّس **Highlight** وسمّيه بالاسم من الجدول.
+3. عالـ profile، كبّس عالـ highlight مطوّل ← **Edit highlight** ← **Edit cover**، واختار الصورة من `covers`.
+
+آخر highlight بتعملو بيطلع أوّل واحد، فاعملهن بالعكس: من 6 لـ 1.
+
+## شي لازم تتأكّد منه
+
+- أسعار التوصيل (3$، ومجاني فوق الـ 50$)، التبديل خلال 7 أيام، والدوام (8:00 لـ 16:30) مأخوذين من الـ Launch Marketing Kit تبع 3 تشرين الأول. إذا تغيّر شي، قلّي وبعدّلهن.
+- صورة الجسم الماشي هي نفسها اللي بآخر slide من carousel الورك. إذا في صورة حقيقية للفريق أو المستودع، فيني حطّها مكانها.

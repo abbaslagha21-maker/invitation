@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-top: #071a45;
+    --sky: #63B8F7;
+    --green: #5BB52C;
+    --ink: #0A2F72;
+    --soft: #CFE3FA;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  #pano {
+    position: relative;
+    width: 3240px;
+    height: 1440px;
+    overflow: hidden;
+    font-family: 'Alexandria', sans-serif;
+    color: #fff;
+    /* stops follow the walking-figure image so its edges disappear into the background */
+    background: linear-gradient(to bottom,
+      #071a45 0px, #071a45 280px, #081e45 440px, #102a43 600px,
+      #133040 820px, #163041 1000px, #122840 1160px, #071d44 1360px, #071d44 1440px);
+  }
+  .walk {
+    position: absolute;
+    left: 2280px; top: 280px;
+    width: 864px; height: 1080px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%);
+  }
+  .glow {
+    position: absolute;
+    width: 1500px; height: 900px;
+    left: 330px; top: 120px;
+    background: radial-gradient(closest-side, rgba(99,184,247,0.16), rgba(99,184,247,0) 100%);
+    pointer-events: none;
+  }
+  .icon {
+    position: absolute; top: 72px; width: 118px; height: auto;
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.45));
+  }
+  .big {
+    position: absolute;
+    top: 300px;
+    font-weight: 900;
+    font-size: 420px;
+    line-height: 1;
+    letter-spacing: -6px;
+    white-space: nowrap;
+  }
+  .ask { right: calc(3240px - 1080px + 22px); color: #fff; direction: ltr; }
+  .med { left: calc(1080px - 6px); color: var(--sky); direction: ltr;
+         filter: drop-shadow(0 0 40px rgba(99,184,247,0.5)); }
+  .isal {
+    position: absolute; right: 170px; top: 165px;
+    font-weight: 900; font-size: 230px; line-height: 1.25; color: #fff;
+  }
+  .sub {
+    position: absolute; top: 850px; width: 900px;
+    text-align: right;
+  }
+  .label { font-size: 60px; font-weight: 800; color: var(--sky); line-height: 1.5; }
+  .line { font-size: 42px; font-weight: 500; line-height: 1.65; color: #fff; }
+  .muted { color: var(--soft); font-size: 34px; font-weight: 500; line-height: 1.6; margin-top: 14px; }
+  ul { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  li { display: flex; align-items: center; gap: 22px; font-size: 42px; font-weight: 600; line-height: 1.45; }
+  li .dot { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; background: var(--green); }
+  .bar {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 150px;
+    background: #fff;
+  }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 14px; display: flex; }
+  .stripe div { flex: 1; }
+  .barcell {
+    position: absolute; bottom: 14px; height: 136px; width: 1080px;
+    display: flex; align-items: center; justify-content: center; gap: 22px;
+    color: var(--ink); font-size: 40px; font-weight: 700; white-space: nowrap;
+  }
+  .barcell .sep { width: 8px; height: 8px; border-radius: 50%; background: #3aa0da; }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .light { font-weight: 500; color: #34507f; }
+</style>
+</head>
+<body>
+<div id="pano">
+  <img class="walk" src="assets/walk.jpg" alt="">
+  <div class="glow"></div>
+
+  <!-- logo icon, top-left of each tile -->
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 72px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 1152px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 2232px">
+
+  <!-- headline: اسأل (tile 3) → Ask (tile 1) | med (tile 2) -->
+  <div class="isal">اسأل</div>
+  <div class="big ask">Ask</div>
+  <div class="big med">med</div>
+
+  <!-- tile 1 (left) -->
+  <div class="sub" style="right: calc(3240px - 1080px + 90px)">
+    <div class="label">عندك سؤال؟</div>
+    <div class="line">عن عملية عظم، كسر، أو شو بتحتاج بعدها؟<br>ابعتلنا عالواتساب، ومنجاوبك ببساطة.</div>
+    <div class="muted">دكتورك بيقرّر، ونحنا معك بكل خطوة.</div>
+  </div>
+
+  <!-- tile 2 (middle) -->
+  <div class="sub" style="right: calc(3240px - 2160px + 90px)">
+    <div class="label">شو منقدّم؟</div>
+    <ul>
+      <li><span class="dot"></span><span>مع دكاترة الشمال بغرفة العمليات</span></li>
+      <li><span class="dot"></span><span>مشدّات ومخدّات طبية للتعافي بالبيت</span></li>
+      <li><span class="dot"></span><span>توصيل لكل لبنان، والدفع عند الاستلام</span></li>
+    </ul>
+  </div>
+
+  <!-- bottom bar across all three tiles -->
+  <div class="bar">
+    <div class="barcell" style="left: 0">
+      <span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr light">askmedlb.com</span>
+    </div>
+    <div class="barcell" style="left: 1080px">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3f9a35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span><span class="sep"></span><span class="light">للأسئلة والطلبات</span>
+    </div>
+    <div class="barcell" style="left: 2160px">
+      <span>صاحب العيلة اللي بيفهم بالعظم</span><span class="sep"></span><span class="light">من 2006</span>
+    </div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+</body>
+</html>
