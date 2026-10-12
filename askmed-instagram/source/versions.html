@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #061A45; --ink: #0A2F72; --logo-navy: #0A4A9C; --logo-sky: #2F9FE4; --sky: #63B8F7; --green: #5BB52C; --soft: #CFE3FA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  .pano { position: relative; width: 3240px; height: 1440px; overflow: hidden; font-family: 'Alexandria', sans-serif; }
+  .abs { position: absolute; }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .stripe { position: absolute; left: 0; right: 0; height: 12px; display: flex; direction: ltr; }
+  .stripe div { flex: 1; }
+  .cell { position: absolute; width: 1080px; display: flex; align-items: center; justify-content: center; gap: 20px; white-space: nowrap; font-weight: 700; font-size: 40px; }
+  .sep { width: 8px; height: 8px; border-radius: 50%; background: #3aa0da; }
+  .lock { position: absolute; top: 74px; display: flex; align-items: center; gap: 14px; direction: ltr; }
+  .lock .i { height: 92px; }
+  .lock .w { height: 50px; }
+
+  /* ---------- B · white, like the reference ---------- */
+  #B { background: #fff; color: var(--ink); }
+  #B .ring { position: absolute; border-radius: 50%; border: 3px solid #E4EFFA; }
+  #B .big { position: absolute; top: 400px; font-weight: 900; font-size: 420px; line-height: 1; letter-spacing: -6px; white-space: nowrap; direction: ltr; }
+  #B .tag { position: absolute; top: 880px; width: 1080px; text-align: center; font-size: 46px; font-weight: 600; color: #34507f; }
+  #B .tag b { color: var(--logo-sky); font-weight: 800; }
+  #B .photo { position: absolute; left: 2160px; top: 0; width: 1080px; height: 1300px; object-fit: cover; }
+  #B .shade { position: absolute; left: 2160px; top: 0; width: 1080px; height: 1300px;
+              background: linear-gradient(to bottom, rgba(2,22,74,0.9) 0%, rgba(2,22,74,0.5) 26%, rgba(2,22,74,0) 46%); }
+  #B .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: var(--ink); color: #fff; }
+
+  /* ---------- C · the journey ---------- */
+  #C { background: #02164a; color: #fff; }
+  #C .photo { position: absolute; top: 0; width: 1080px; height: 1440px; object-fit: cover; }
+  #C .shade { position: absolute; top: 0; width: 1080px; height: 1440px;
+              background: linear-gradient(to bottom, rgba(2,22,74,0.9) 0%, rgba(2,22,74,0.6) 27%, rgba(2,22,74,0) 46%, rgba(2,22,74,0) 60%, rgba(2,22,74,0.96) 82%); }
+  #C .mid { position: absolute; left: 1080px; top: 0; width: 1080px; height: 1440px;
+            background: radial-gradient(circle at 50% 52%, #0c2f78 0%, #05205f 40%, #02164a 78%); }
+  #C .phrase { position: absolute; top: 120px; width: 1080px; padding: 0 90px; text-align: right; font-weight: 900; font-size: 150px; line-height: 1.32; }
+  #C .phrase.acc { color: var(--sky); filter: drop-shadow(0 0 36px rgba(99,184,247,0.5)); }
+  #C .midlogo { position: absolute; left: 1080px; width: 1080px; top: 640px; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  #C .midlogo .row { display: flex; align-items: center; gap: 22px; direction: ltr; }
+  #C .midlogo .row img.i { height: 150px; }
+  #C .midlogo .row img.w { height: 110px; }
+  #C .midlogo .t { font-size: 44px; font-weight: 600; color: var(--soft); }
+  #C .track { position: absolute; top: 1128px; left: 150px; width: 2940px; height: 0; border-top: 5px dashed rgba(99,184,247,0.55); }
+  #C .node { position: absolute; top: 1106px; width: 48px; height: 48px; margin-left: -24px; border-radius: 50%; background: var(--sky); box-shadow: 0 0 0 10px rgba(99,184,247,0.22), 0 0 30px rgba(99,184,247,0.7); }
+  #C .node.g { background: var(--green); box-shadow: 0 0 0 10px rgba(91,181,44,0.22), 0 0 30px rgba(91,181,44,0.7); }
+  #C .nlabel { position: absolute; top: 1180px; width: 600px; margin-left: -300px; text-align: center; font-size: 42px; font-weight: 700; }
+  #C .arrow { position: absolute; top: 1110px; left: 104px; width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-right: 34px solid rgba(99,184,247,0.85); }
+  #C .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: rgba(3,14,40,0.85); color: #fff; }
+  #C .bar .cell { font-size: 36px; font-weight: 600; color: #E6F0FB; }
+
+  /* ---------- D · questions from WhatsApp ---------- */
+  #D { background: #EEF6FD; color: var(--ink); }
+  #D .dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(10,47,114,0.07) 3px, transparent 3.5px); background-size: 44px 44px; }
+  #D .word { position: absolute; top: 230px; width: 1080px; padding: 0 90px; text-align: right; font-weight: 900; font-size: 250px; line-height: 1.2; white-space: nowrap; }
+  #D .word.acc { color: var(--logo-sky); }
+  .bub { position: absolute; max-width: 860px; padding: 34px 44px; font-size: 44px; font-weight: 600; line-height: 1.6; border-radius: 48px; box-shadow: 0 18px 40px -22px rgba(10,47,114,0.45); }
+  .bub.q { background: #fff; color: var(--ink); border-top-right-radius: 10px; }
+  .bub.a { background: var(--ink); color: #fff; border-top-left-radius: 10px; }
+  .bub .who { display: block; font-size: 30px; font-weight: 700; color: #6a7f9f; margin-bottom: 8px; }
+  .bub.a .who { color: var(--sky); }
+  .wa { display: inline-flex; align-items: center; gap: 16px; background: #fff; color: var(--ink); border-radius: 999px; padding: 18px 36px; font-size: 42px; font-weight: 800; }
+  #D .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: #fff; color: var(--ink); }
+
+  /* ---------- E / F · one image across the three posts ---------- */
+  .pe { color: #fff; background: #02164a; }
+  .pe .bg { position: absolute; left: 0; top: 0; width: 3240px; height: 1440px; }
+  .pe .top { position: absolute; left: 0; top: 0; width: 3240px; height: 520px; background: linear-gradient(to bottom, rgba(2,22,74,0.55), rgba(2,22,74,0)); }
+  .pe .w { position: absolute; top: 90px; width: 1080px; padding: 0 100px; text-align: right; font-weight: 900; font-size: 210px; line-height: 1.25; white-space: nowrap; }
+  .pe .w.acc { color: var(--sky); filter: drop-shadow(0 0 36px rgba(99,184,247,0.55)); }
+  .pe .lbl { position: absolute; top: 375px; width: 1080px; padding: 0 104px; text-align: right; font-size: 46px; font-weight: 700; color: var(--soft); }
+  .pe .lbl span { display: inline-block; background: rgba(99,184,247,0.16); border: 2px solid rgba(99,184,247,0.45); border-radius: 999px; padding: 8px 28px; }
+  .pe .icon { position: absolute; top: 74px; height: 96px; }
+  .pe .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: rgba(1,10,40,0.82); }
+  .pe .bar .cell { font-size: 36px; font-weight: 600; color: #E6F0FB; }
+</style>
+</head>
+<body>
+
+<!-- ======================= B ======================= -->
+<div class="pano" id="B">
+  <div class="ring" style="left: 380px; top: -140px; width: 1400px; height: 1400px;"></div>
+  <div class="ring" style="left: 560px; top: 40px; width: 1040px; height: 1040px;"></div>
+
+  <div class="lock" style="left: 72px"><img class="i" src="assets/icon-dark.png" alt=""><img class="w" src="assets/wordmark-dark.png" alt=""></div>
+  <div class="lock" style="left: 1152px"><img class="i" src="assets/icon-dark.png" alt=""><img class="w" src="assets/wordmark-dark.png" alt=""></div>
+
+  <div class="big" style="right: calc(3240px - 1080px + 22px); color: var(--logo-navy)">Ask</div>
+  <div class="big" style="left: calc(1080px - 6px); color: var(--logo-sky)">med</div>
+
+  <div class="tag" style="left: 0">من 2006 <b>·</b> طرابلس، لبنان</div>
+  <div class="tag" style="left: 1080px">عظم وتعافي <b>·</b> مع دكاترة الشمال</div>
+
+  <img class="photo" src="assets/tray.jpg" alt="">
+  <div class="shade"></div>
+  <div class="abs" style="left: 2160px; top: 120px; width: 1080px; padding: 0 100px; text-align: right; color: #fff;">
+    <div style="font-size: 170px; font-weight: 900; line-height: 1.3;">تعرّف</div>
+    <div style="font-size: 170px; font-weight: 900; line-height: 1.3; color: var(--sky);">على</div>
+  </div>
+
+  <div class="bar">
+    <div class="stripe" style="top: 0"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+    <div class="cell" style="left: 0; top: 12px; height: 128px"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px; top: 12px; height: 128px"><span class="ltr">+961 76 103 507</span><span class="sep"></span><span style="font-weight:500">للأسئلة والطلبات</span></div>
+    <div class="cell" style="left: 2160px; top: 12px; height: 128px"><span>صاحب العيلة اللي بيفهم بالعظم</span></div>
+  </div>
+</div>
+
+<!-- ======================= C ======================= -->
+<div class="pano" id="C">
+  <img class="abs" src="assets/legs.jpg" alt="" style="left: 110px; top: 250px; width: 860px; height: 1151px; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);">
+  <div class="shade" style="left: 0"></div>
+  <div class="mid"></div>
+  <img class="photo" src="assets/tray.jpg" alt="" style="left: 2160px">
+  <div class="shade" style="left: 2160px"></div>
+
+  <div class="phrase" style="left: 2160px">من غرفة<br>العمليات</div>
+  <div class="phrase" style="left: 1080px">لحدّ ما</div>
+  <div class="phrase acc" style="left: 0">ترجع<br>تمشي.</div>
+
+  <div class="midlogo">
+    <div class="row"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+    <div class="t">معك بكل خطوة، من 2006</div>
+  </div>
+
+  <div class="track"></div>
+  <div class="arrow"></div>
+  <div class="node" style="left: 2700px"></div>
+  <div class="node" style="left: 1620px"></div>
+  <div class="node g" style="left: 540px"></div>
+  <div class="nlabel" style="left: 2700px">العملية</div>
+  <div class="nlabel" style="left: 1620px">التعافي بالبيت</div>
+  <div class="nlabel" style="left: 540px">أوّل خطوة</div>
+
+  <div class="bar">
+    <div class="cell" style="left: 0; top: 0; height: 108px"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px; top: 0; height: 108px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px; top: 0; height: 108px"><span>صاحب العيلة اللي بيفهم بالعظم</span></div>
+    <div class="stripe" style="bottom: 0"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+<!-- ======================= D ======================= -->
+<div class="pano" id="D">
+  <div class="dots"></div>
+  <img class="abs" src="assets/icon-dark.png" alt="" style="left: 72px; top: 74px; height: 100px">
+  <img class="abs" src="assets/icon-dark.png" alt="" style="left: 1152px; top: 74px; height: 100px">
+  <img class="abs" src="assets/icon-dark.png" alt="" style="left: 2232px; top: 74px; height: 100px">
+
+  <div class="word" style="left: 2160px">عندك</div>
+  <div class="word" style="left: 1080px">سؤال؟</div>
+  <div class="word acc" style="left: 0">اسألنا.</div>
+
+  <!-- questions, the way they come in on WhatsApp -->
+  <div class="bub q" style="right: 110px; top: 720px; max-width: 860px;"><span class="who">سؤال من الواتساب</span>إمّي رح تعمل عملية ركبة، شو لازم نحضّر بالبيت؟</div>
+  <div class="bub q" style="right: calc(1080px + 110px); top: 690px; max-width: 820px;"><span class="who">سؤال من الواتساب</span>شو القياس المناسب لمشدّ الضهر؟</div>
+  <div class="bub q" style="right: calc(1080px + 250px); top: 980px; max-width: 700px;">بتوصلوا لعكّار؟</div>
+
+  <!-- the answer -->
+  <div class="bub a" style="left: 110px; top: 700px; max-width: 860px;"><span class="who">Askmed</span>أكيد! ابعتلنا سؤالك، ومنجاوبك بوضوح، خطوة بخطوة.</div>
+  <div class="abs" style="left: 110px; top: 1030px; direction: ltr;"><span class="wa">
+    <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#3f9a35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+    +961 76 103 507</span></div>
+
+  <div class="bar">
+    <div class="cell" style="left: 0; top: 0; height: 118px"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px; top: 0; height: 118px"><span>عظم، كسور، وتعافي</span><span class="sep"></span><span style="font-weight:500">من 2006</span></div>
+    <div class="cell" style="left: 2160px; top: 0; height: 118px"><span>صاحب العيلة اللي بيفهم بالعظم</span></div>
+    <div class="stripe" style="bottom: 0"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+
+<div class="pano pe" id="E">
+  <img class="bg" src="assets/pano2.jpg" alt="">
+  <div class="top"></div>
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 72px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 1152px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 2232px">
+  <div class="w" style="left: 2160px">خطوة</div>
+  <div class="w" style="left: 1080px">بخطوة،</div>
+  <div class="w acc" style="left: 0">معك.</div>
+  <div class="lbl" style="left: 2160px"><span>أوّل يوم بعد العملية</span></div>
+  <div class="lbl" style="left: 1080px"><span>أوّل خطوة</span></div>
+  <div class="lbl" style="left: 0"><span>رجعت تمشي</span></div>
+  <div class="bar">
+    <div class="cell" style="left: 0; top: 0; height: 108px"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px; top: 0; height: 108px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px; top: 0; height: 108px"><span>Askmed معك من 2006</span></div>
+    <div class="stripe" style="bottom: 0"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+<div class="pano pe" id="F">
+  <img class="bg" src="assets/pano1.jpg" alt="">
+  <div class="top"></div>
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 72px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 1152px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 2232px">
+  <div class="w" style="left: 2160px">خطوة</div>
+  <div class="w" style="left: 1080px">بخطوة،</div>
+  <div class="w acc" style="left: 0">معك.</div>
+  <div class="lbl" style="left: 2160px"><span>أوّل يوم بعد العملية</span></div>
+  <div class="lbl" style="left: 1080px"><span>أوّل خطوة</span></div>
+  <div class="lbl" style="left: 0"><span>رجعت تمشي</span></div>
+  <div class="bar">
+    <div class="cell" style="left: 0; top: 0; height: 108px"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px; top: 0; height: 108px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px; top: 0; height: 108px"><span>Askmed معك من 2006</span></div>
+    <div class="stripe" style="bottom: 0"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+</body>
+</html>

@@ -2,9 +2,26 @@
 
 `preview.jpg` بيفرجيك شكل الصفحة بعد ما تنزّل كل شي.
 
+## الـ versions
+
+`versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
+
+| Version | الفكرة | الملفات |
+|---|---|---|
+| A | «اسأل Askmed» · كحلي | `pinned/` |
+| B | «تعرّف على Askmed» · أبيض | `versions/B-ta3arraf-3ala-askmed/` |
+| C | «من غرفة العمليات لحدّ ما ترجع تمشي» | `versions/C-men-ghorfet-el-3amaliyyet/` |
+| D | «عندك سؤال؟ اسألنا.» · فاتح | `versions/D-3endak-so2al/` |
+| E | «خطوة بخطوة، معك.» · صورة وحدة عالـ 3 | `versions/E-khotwe-b-khotwe/` |
+| F | نفس E برجّال وعكّازة | `versions/F-khotwe-b-khotwe-rajol/` |
+
+Highlight covers: `highlights/covers` (كحلي)، `highlights/covers-white` (أبيض)، `highlights/covers-blue` (أزرق).
+
+صور الـ legs، الـ tray، والـ panorama تبع E و F معمولين بـ Higgsfield. الشرح تحت هوّي نفسو لأي version بتختارو.
+
 ## الـ 3 pinned posts
 
-الـ 3 صور هنّي صورة وحدة عريضة مقسومة عـ 3، وبتنقرا: «اسأل Askmed». كل وحدة 1080×1440 (3:4).
+الـ 3 صور هنّي صورة وحدة عريضة مقسومة عـ 3. كل وحدة 1080×1440 (3:4).
 
 نزّلهن بهالترتيب، وبعد كل post اعملو **Pin to profile**:
 
@@ -15,7 +32,7 @@
 - آخر post بتعملو pin بيطلع أوّل واحد عالشمال، فهيك بيركبوا صح. إذا طلع الترتيب غلط: اعمل Unpin للـ 3، ورجاع اعمل pin بالترتيب 1، 2، 3.
 - وقت التنزيل اختار الـ crop **3:4** (مش 1:1)، لحتى تبيّن الصورة كاملة وما تنقصّ الكلمة بالنص.
 
-### Captions
+### Captions (مكتوبين لـ version A، وبكتبلك غيرن للـ version اللي بتختارو)
 
 **Post 1 (اسأل)**
 
@@ -64,4 +81,4 @@ Hashtags بآخر كل caption: `#Lebanon #Tripoli #OrthopedicSupport #لبنا�
 ## شي لازم تتأكّد منه
 
 - أسعار التوصيل (3$، ومجاني فوق الـ 50$)، التبديل خلال 7 أيام، والدوام (8:00 لـ 16:30) مأخوذين من الـ Launch Marketing Kit تبع 3 تشرين الأول. إذا تغيّر شي، قلّي وبعدّلهن.
-- صورة الجسم الماشي هي نفسها اللي بآخر slide من carousel الورك. إذا في صورة حقيقية للفريق أو المستودع، فيني حطّها مكانها.
+- الصور مولّدة (still life و graphics)، متل ما بتسمح الـ Brand Direction. إذا في صورة حقيقية للفريق أو المستودع، فيني حطّها مكانها.
