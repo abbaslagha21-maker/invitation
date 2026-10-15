@@ -4,10 +4,12 @@
 
 ## الـ versions
 
-`versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
+`G-H-operating-room-recovery.jpg` فيه الـ 2 versions الجداد (غرفة العمليات والتعافي، بكلام professional)، `versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
 
 | Version | الفكرة | الملفات |
 |---|---|---|
+| G | «داخل غرفة العمليات»، و«بعد العملية، خلال التعافي» · كحلي | `versions/G-ghorfet-el-3amaliyyet-w-el-ta3afi/` |
+| H | نفس G · أبيض | `versions/H-ghorfet-el-3amaliyyet-w-el-ta3afi-abyad/` |
 | A | «اسأل Askmed» · كحلي | `pinned/` |
 | B | «تعرّف على Askmed» · أبيض | `versions/B-ta3arraf-3ala-askmed/` |
 | C | «من غرفة العمليات لحدّ ما ترجع تمشي» | `versions/C-men-ghorfet-el-3amaliyyet/` |
@@ -17,7 +19,7 @@
 
 Highlight covers: `highlights/covers` (كحلي)، `highlights/covers-white` (أبيض)، `highlights/covers-blue` (أزرق).
 
-صور الـ legs، الـ tray، والـ panorama تبع E و F معمولين بـ Higgsfield. الشرح تحت هوّي نفسو لأي version بتختارو.
+صور غرفة العمليات (G و H)، الـ legs، الـ tray، والـ panorama تبع E و F معمولين بـ Higgsfield. صور المنتجات بـ G و H هنّي صور المنتجات الحقيقية من الموقع. الشرح تحت هوّي نفسو لأي version بتختارو: الملفات بنفس الأسماء جوّا كل folder.
 
 ## الـ 3 pinned posts
 
@@ -32,7 +34,29 @@ Highlight covers: `highlights/covers` (كحلي)، `highlights/covers-white` (أ
 - آخر post بتعملو pin بيطلع أوّل واحد عالشمال، فهيك بيركبوا صح. إذا طلع الترتيب غلط: اعمل Unpin للـ 3، ورجاع اعمل pin بالترتيب 1، 2، 3.
 - وقت التنزيل اختار الـ crop **3:4** (مش 1:1)، لحتى تبيّن الصورة كاملة وما تنقصّ الكلمة بالنص.
 
-### Captions (مكتوبين لـ version A، وبكتبلك غيرن للـ version اللي بتختارو)
+### Captions لـ G و H
+
+**Post 1 (داخل غرفة العمليات)**
+
+> داخل غرفة العمليات
+> منذ 2006، نعمل مع جرّاحي العظام في الشمال: زرعات وأدوات جراحة العظام، تجهيز الأطقم الجراحية لكل حالة، ودعم فني للجرّاح أثناء العملية.
+> Since 2006, working alongside orthopaedic surgeons in the operating room.
+
+**Post 2 (Askmed)**
+
+> Askmed
+> شريك الجرّاح في غرفة العمليات، وشريك المريض في التعافي.
+> Orthopaedic surgery & recovery · Since 2006
+> 💬 واتساب: +961 76 103 507 · askmedlb.com
+
+**Post 3 (بعد العملية، خلال التعافي)**
+
+> بعد العملية، خلال التعافي
+> دعامات الركبة، مشدّات الظهر، أطواق الرقبة، دعامات المعصم، ومستلزمات التعافي الأخرى، مع مساعدة في اختيار المقاس المناسب.
+> توصيل إلى جميع المناطق اللبنانية · الدفع عند الاستلام
+> Recovery products with sizing help, delivered across Lebanon → askmedlb.com
+
+### Captions لـ A
 
 **Post 1 (اسأل)**
 
@@ -63,12 +87,12 @@ Hashtags بآخر كل caption: `#Lebanon #Tripoli #OrthopedicSupport #لبنا�
 
 | # | اسم الـ highlight | الملف |
 |---|---|---|
-| 1 | مين نحنا | `1-min-nehna.jpg` |
+| 1 | من نحن | `1-min-nehna.jpg` |
 | 2 | المنتجات | `2-el-montajet.jpg` |
 | 3 | اسألنا | `3-is2alna.jpg` |
-| 4 | القياسات | `4-el-2iyesat.jpg` |
+| 4 | المقاسات | `4-el-2iyesat.jpg` |
 | 5 | التوصيل | `5-el-tawsil.jpg` |
-| 6 | وين نحنا | `6-wen-nehna.jpg` |
+| 6 | موقعنا | `6-wen-nehna.jpg` |
 
 لكل واحد:
 
@@ -81,4 +105,6 @@ Hashtags بآخر كل caption: `#Lebanon #Tripoli #OrthopedicSupport #لبنا�
 ## شي لازم تتأكّد منه
 
 - أسعار التوصيل (3$، ومجاني فوق الـ 50$)، التبديل خلال 7 أيام، والدوام (8:00 لـ 16:30) مأخوذين من الـ Launch Marketing Kit تبع 3 تشرين الأول. إذا تغيّر شي، قلّي وبعدّلهن.
-- الصور مولّدة (still life و graphics)، متل ما بتسمح الـ Brand Direction. إذا في صورة حقيقية للفريق أو المستودع، فيني حطّها مكانها.
+- «دعم فني للجرّاح أثناء العملية» و«تجهيز الأطقم الجراحية لكل حالة» لازم يكونوا صح 100% قبل النشر.
+- صورة غرفة العمليات مولّدة، مش مستشفى حقيقي. الـ Brand Direction بتقول المستشفيات بصور حقيقية، فإذا في صورة حقيقية (بإذن المستشفى)، الأحسن نحطّها مكانها.
+- باقي الصور مولّدة (still life و graphics). إذا في صورة حقيقية للفريق أو المستودع، فيني حطّها مكانها.

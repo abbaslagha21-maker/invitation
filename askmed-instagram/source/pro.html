@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --deep: #02164a; --ink: #0A2F72; --logo-navy: #0A4A9C; --logo-sky: #2F9FE4; --sky: #63B8F7; --green: #5BB52C; --soft: #CFE3FA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  .pano { position: relative; width: 3240px; height: 1440px; overflow: hidden; font-family: 'Alexandria', sans-serif; }
+  .abs { position: absolute; }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .tile { position: absolute; top: 0; width: 1080px; height: 1440px; }
+  .icon { position: absolute; top: 74px; height: 96px; }
+  .eyebrow { position: absolute; top: 190px; width: 1080px; padding: 0 100px; text-align: right; font-size: 40px; font-weight: 700; letter-spacing: 0; }
+  .eyebrow span { display: inline-flex; align-items: center; gap: 14px; }
+  .eyebrow i { display: inline-block; width: 46px; height: 6px; border-radius: 3px; }
+  .head { position: absolute; top: 250px; width: 1080px; padding: 0 100px; text-align: right; font-weight: 900; font-size: 112px; line-height: 1.3; white-space: nowrap; }
+  .list { position: absolute; width: 1080px; padding: 0 100px; display: flex; flex-direction: column; gap: 20px; }
+  .list div { display: flex; align-items: center; gap: 22px; font-size: 42px; font-weight: 600; line-height: 1.45; }
+  .list b { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; }
+  .cards { position: absolute; width: 1080px; padding: 0 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .card { border-radius: 30px; overflow: hidden; }
+  .card img { width: 100%; height: 222px; object-fit: cover; display: block; }
+  .card div { padding: 14px 20px 18px; font-size: 34px; font-weight: 700; text-align: center; }
+  .note { position: absolute; width: 1080px; padding: 0 100px; text-align: right; font-size: 34px; font-weight: 500; }
+  .center { position: absolute; left: 1080px; width: 1080px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .center .lock { display: flex; align-items: center; gap: 24px; direction: ltr; }
+  .center .lock .i { height: 170px; }
+  .center .lock .w { height: 118px; }
+  .center .rule { width: 120px; height: 8px; border-radius: 4px; margin: 54px 0 46px; }
+  .center .line { font-size: 58px; font-weight: 800; line-height: 1.55; }
+  .center .en { margin-top: 30px; font-size: 34px; font-weight: 600; letter-spacing: 0.5px; }
+  .flow { position: absolute; left: 1080px; width: 1080px; top: 1060px; display: flex; align-items: center; justify-content: center; gap: 26px; font-size: 38px; font-weight: 700; }
+  .flow .pill { border-radius: 999px; padding: 16px 34px; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; }
+  .cell { position: absolute; top: 0; height: 118px; width: 1080px; display: flex; align-items: center; justify-content: center; gap: 20px; white-space: nowrap; font-weight: 700; font-size: 38px; }
+  .sep { width: 8px; height: 8px; border-radius: 50%; background: #3aa0da; }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; display: flex; direction: ltr; }
+  .stripe div { flex: 1; }
+
+  /* ---------- G · navy ---------- */
+  #G { background: var(--deep); color: #fff; }
+  #G .t1 { left: 0; background: radial-gradient(circle at 50% 60%, #0a2a6e 0%, #04195a 45%, #02164a 85%); }
+  #G .t2 { left: 1080px; background: radial-gradient(circle at 50% 45%, #0c2f78 0%, #05205f 42%, #02164a 82%); }
+  #G .t3 { left: 2160px; background: #011035; }
+  #G .photo { position: absolute; left: 2160px; top: 110px; width: 1080px; height: 1446px; }
+  #G .shade { position: absolute; left: 2160px; top: 0; width: 1080px; height: 1440px;
+              background: linear-gradient(to bottom, rgba(2,15,51,0.9) 0%, rgba(2,15,51,0.55) 28%, rgba(2,15,51,0) 40%, rgba(2,15,51,0) 58%, rgba(2,15,51,0.92) 76%); }
+  #G .eyebrow { color: var(--sky); }
+  #G .eyebrow i { background: var(--sky); }
+  #G .acc { color: var(--sky); }
+  #G .list b { background: var(--green); }
+  #G .card { background: #fff; color: var(--ink); }
+  #G .note { color: var(--soft); }
+  #G .center .rule { background: var(--green); }
+  #G .center .en { color: var(--sky); }
+  #G .flow .pill { background: rgba(99,184,247,0.14); border: 2px solid rgba(99,184,247,0.5); }
+  #G .bar { background: #fff; color: var(--ink); }
+
+  /* ---------- H · white ---------- */
+  #H { background: #fff; color: var(--ink); }
+  #H .t1 { left: 0; background: #F4F8FD; }
+  #H .t2 { left: 1080px; background: #fff; }
+  #H .t3 { left: 2160px; background: #eaf1f8; }
+  #H .photo { position: absolute; left: 2160px; top: 110px; width: 1080px; height: 1446px; }
+  #H .shade { position: absolute; left: 2160px; top: 0; width: 1080px; height: 1440px;
+              background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 28%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 58%, rgba(255,255,255,0.94) 76%); }
+  #H .eyebrow { color: var(--logo-sky); }
+  #H .eyebrow i { background: var(--logo-sky); }
+  #H .acc { color: var(--logo-sky); }
+  #H .list b { background: var(--green); }
+  #H .card { background: #fff; color: var(--ink); box-shadow: 0 18px 40px -24px rgba(10,47,114,0.45); }
+  #H .note { color: #4a5d7e; }
+  #H .center .rule { background: var(--green); }
+  #H .center .en { color: var(--logo-sky); }
+  #H .flow .pill { background: #EEF6FD; border: 2px solid #CFE3FA; }
+  #H .bar { background: var(--ink); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ======================= G ======================= -->
+<div class="pano" id="G">
+  <div class="tile t1"></div>
+  <div class="tile t2"></div>
+  <div class="tile t3"></div>
+  <img class="photo" src="assets/or-dark.jpg" alt="">
+  <div class="shade"></div>
+
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 72px">
+  <img class="icon" src="assets/icon-white.png" alt="" style="left: 2232px">
+
+  <!-- tile 3: in the operating room -->
+  <div class="eyebrow" style="left: 2160px"><span><i></i>الجراحة</span></div>
+  <div class="head" style="left: 2160px">داخل<br><span class="acc">غرفة العمليات</span></div>
+  <div class="list" style="left: 2160px; top: 980px;">
+    <div><b></b>زرعات وأدوات جراحة العظام</div>
+    <div><b></b>تجهيز الأطقم الجراحية لكل حالة</div>
+    <div><b></b>دعم فني للجرّاح أثناء العملية</div>
+  </div>
+
+  <!-- tile 2: the brand -->
+  <div class="center" style="top: 330px;">
+    <div class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+    <div class="rule"></div>
+    <div class="line">شريك الجرّاح في غرفة العمليات<br>وشريك المريض في التعافي</div>
+    <div class="en ltr">Orthopaedic surgery &amp; recovery · Since 2006</div>
+  </div>
+  <div class="flow"><span class="pill">الجراحة</span><svg width="70" height="30" viewBox="0 0 70 30" aria-hidden="true"><path d="M66 15H6M18 4 5 15l13 11" fill="none" stroke="#63B8F7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="pill">التعافي</span></div>
+
+  <!-- tile 1: after surgery -->
+  <div class="eyebrow" style="left: 0"><span><i></i>التعافي</span></div>
+  <div class="head" style="left: 0;">وبعد العملية<br><span class="acc">خلال التعافي</span></div>
+  <div class="cards" style="left: 0; top: 600px;">
+    <div class="card"><img src="assets/p-knee.jpg" alt=""><div>دعامات الركبة</div></div>
+    <div class="card"><img src="assets/p-back.jpg" alt="" style="object-position: 50% 30%"><div>مشدّات الظهر</div></div>
+    <div class="card"><img src="assets/p-neck.jpg" alt="" style="object-position: 50% 45%"><div>أطواق الرقبة</div></div>
+    <div class="card"><img src="assets/p-wrist.jpg" alt=""><div>دعامات المعصم</div></div>
+  </div>
+
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px">
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#3f9a35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px"><span>جراحة العظام والتعافي</span><span class="sep"></span><span style="font-weight:500">منذ 2006</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+<!-- ======================= H ======================= -->
+<div class="pano" id="H">
+  <div class="tile t1"></div>
+  <div class="tile t2"></div>
+  <div class="tile t3"></div>
+  <img class="photo" src="assets/or-light.jpg" alt="">
+  <div class="shade"></div>
+
+  <img class="icon" src="assets/icon-dark.png" alt="" style="left: 72px">
+  <img class="icon" src="assets/icon-dark.png" alt="" style="left: 2232px">
+
+  <div class="eyebrow" style="left: 2160px"><span><i></i>الجراحة</span></div>
+  <div class="head" style="left: 2160px">داخل<br><span class="acc">غرفة العمليات</span></div>
+  <div class="list" style="left: 2160px; top: 980px;">
+    <div><b></b>زرعات وأدوات جراحة العظام</div>
+    <div><b></b>تجهيز الأطقم الجراحية لكل حالة</div>
+    <div><b></b>دعم فني للجرّاح أثناء العملية</div>
+  </div>
+
+  <div class="center" style="top: 330px;">
+    <div class="lock"><img class="i" src="assets/icon-dark.png" alt=""><img class="w" src="assets/wordmark-dark.png" alt="Askmed"></div>
+    <div class="rule"></div>
+    <div class="line">شريك الجرّاح في غرفة العمليات<br>وشريك المريض في التعافي</div>
+    <div class="en ltr">Orthopaedic surgery &amp; recovery · Since 2006</div>
+  </div>
+  <div class="flow"><span class="pill">الجراحة</span><svg width="70" height="30" viewBox="0 0 70 30" aria-hidden="true"><path d="M66 15H6M18 4 5 15l13 11" fill="none" stroke="#2F9FE4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="pill">التعافي</span></div>
+
+  <div class="eyebrow" style="left: 0"><span><i></i>التعافي</span></div>
+  <div class="head" style="left: 0;">وبعد العملية<br><span class="acc">خلال التعافي</span></div>
+  <div class="cards" style="left: 0; top: 600px;">
+    <div class="card"><img src="assets/p-knee.jpg" alt=""><div>دعامات الركبة</div></div>
+    <div class="card"><img src="assets/p-back.jpg" alt="" style="object-position: 50% 30%"><div>مشدّات الظهر</div></div>
+    <div class="card"><img src="assets/p-neck.jpg" alt="" style="object-position: 50% 45%"><div>أطواق الرقبة</div></div>
+    <div class="card"><img src="assets/p-wrist.jpg" alt=""><div>دعامات المعصم</div></div>
+  </div>
+
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px">
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px"><span>جراحة العظام والتعافي</span><span class="sep"></span><span style="font-weight:500">منذ 2006</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+</body>
+</html>

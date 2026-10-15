@@ -1,7 +1,8 @@
 # Builds compare.html (all pinned versions) and hl-styles.html (highlight cover styles).
 import json, sys
 O = '/home/user/invitation/askmed-instagram'
-versions = json.load(open('versions.json', encoding='utf-8'))
+versions = json.load(open(sys.argv[1] if len(sys.argv) > 1 else 'versions.json', encoding='utf-8'))
+out = sys.argv[2] if len(sys.argv) > 2 else 'compare.html'
 head = '''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>*{box-sizing:border-box}html,body{margin:0;background:#fff}
@@ -22,7 +23,7 @@ for v in versions:
     parts.append(f'<div class="v"><div class="h"><div class="k">{v["key"]}</div><div><div class="t">{v["title"]}</div>'
                  f'<div class="d">{v["desc"]}</div></div></div><div class="grid">{imgs}</div></div>')
 parts.append('</div>')
-labels = ['مين نحنا', 'المنتجات', 'اسألنا', 'القياسات', 'التوصيل', 'وين نحنا']
+labels = ['من نحن', 'المنتجات', 'اسألنا', 'المقاسات', 'التوصيل', 'موقعنا']
 slugs = ['1-min-nehna', '2-el-montajet', '3-is2alna', '4-el-2iyesat', '5-el-tawsil', '6-wen-nehna']
 styles = [('1', 'كحلي', 'covers'), ('2', 'أبيض', 'covers-white'), ('3', 'أزرق', 'covers-blue')]
 parts.append('<div class="sheet" id="hlstyles">')
@@ -31,4 +32,4 @@ for k, name, d in styles:
                     for s, l in zip(slugs, labels))
     parts.append(f'<div class="v"><div class="h"><div class="k">{k}</div><div><div class="t">highlights · {name}</div></div></div><div class="row">{cells}</div></div>')
 parts.append('</div></body></html>')
-open('compare.html', 'w', encoding='utf-8').write('\n'.join(parts))
+open(out, 'w', encoding='utf-8').write('\n'.join(parts))
