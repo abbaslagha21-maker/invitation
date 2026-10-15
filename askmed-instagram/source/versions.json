@@ -1,10 +1,68 @@
 [
- {"key":"G","title":"داخل غرفة العمليات، وبعدها خلال التعافي · كحلي","desc":"الجراحة عاليمين، Askmed بالنص، والتعافي بمنتجات حقيقية عالشمال.","dir":"versions/G-ghorfet-el-3amaliyyet-w-el-ta3afi"},
- {"key":"H","title":"نفس G · أبيض","desc":"نفس الكلام والترتيب، بخلفية فاتحة متل صفحة الدكتورة.","dir":"versions/H-ghorfet-el-3amaliyyet-w-el-ta3afi-abyad"},
- {"key":"A","title":"«اسأل Askmed» · كحلي","desc":"الكلمة مقسومة عـ 3 متل اللوغو، وتحت كل وحدة معلومة.","dir":"pinned"},
- {"key":"B","title":"«تعرّف على Askmed» · أبيض","desc":"أبيض، اسم كبير، وصورة أدوات جراحية عاليمين.","dir":"versions/B-ta3arraf-3ala-askmed"},
- {"key":"C","title":"«من غرفة العمليات لحدّ ما ترجع تمشي»","desc":"قصة بـ 3 مراحل، وخط بيوصل بيناتهن.","dir":"versions/C-men-ghorfet-el-3amaliyyet"},
- {"key":"D","title":"«عندك سؤال؟ اسألنا.» · فاتح","desc":"أسئلة متل اللي بتوصل عالواتساب، والجواب من Askmed.","dir":"versions/D-3endak-so2al"},
- {"key":"E","title":"«خطوة بخطوة، معك.» · صورة وحدة عالـ 3","desc":"من التخت، للـ walker، للمشي.","dir":"versions/E-khotwe-b-khotwe"},
- {"key":"F","title":"«خطوة بخطوة، معك.» · نفس E برجّال","desc":"نفس الفكرة، والعكّازة بدل الـ walker.","dir":"versions/F-khotwe-b-khotwe-rajol"}
+ {
+  "key": "I",
+  "title": "من غرفة العمليات إلى البحر",
+  "desc": "صورة وحدة عالتلاتة: خط ضو بيمشي من طاولة العمليات لتحت إجرين الرجّال اللي عم يمشي عالكورنيش.",
+  "dir": "versions/I-men-ghorfet-el-3amaliyyet-lal-ba7r"
+ },
+ {
+  "key": "I2",
+  "title": "نفس I، بس التعافي بالبيت",
+  "desc": "غرفة العمليات بتنفتح على بيت مضوّي، ومرا عم تمشي.",
+  "dir": "versions/I2-men-ghorfet-el-3amaliyyet-lal-beit"
+ },
+ {
+  "key": "J",
+  "title": "خطوة وحدة بتمرق عالتلاتة",
+  "desc": "الإجر اللي ورا عاليمين (الجراحة)، الورك بالنص، والإجر القدّام عالشمال (التعافي).",
+  "dir": "versions/J-khatwe-wa7de"
+ },
+ {
+  "key": "G",
+  "title": "داخل غرفة العمليات، وبعدها خلال التعافي · كحلي",
+  "desc": "الجراحة عاليمين، Askmed بالنص، والتعافي بمنتجات حقيقية عالشمال.",
+  "dir": "versions/G-ghorfet-el-3amaliyyet-w-el-ta3afi"
+ },
+ {
+  "key": "H",
+  "title": "نفس G · أبيض",
+  "desc": "نفس الكلام والترتيب، بخلفية فاتحة متل صفحة الدكتورة.",
+  "dir": "versions/H-ghorfet-el-3amaliyyet-w-el-ta3afi-abyad"
+ },
+ {
+  "key": "A",
+  "title": "«اسأل Askmed» · كحلي",
+  "desc": "الكلمة مقسومة عـ 3 متل اللوغو، وتحت كل وحدة معلومة.",
+  "dir": "pinned"
+ },
+ {
+  "key": "B",
+  "title": "«تعرّف على Askmed» · أبيض",
+  "desc": "أبيض، اسم كبير، وصورة أدوات جراحية عاليمين.",
+  "dir": "versions/B-ta3arraf-3ala-askmed"
+ },
+ {
+  "key": "C",
+  "title": "«من غرفة العمليات لحدّ ما ترجع تمشي»",
+  "desc": "قصة بـ 3 مراحل، وخط بيوصل بيناتهن.",
+  "dir": "versions/C-men-ghorfet-el-3amaliyyet"
+ },
+ {
+  "key": "D",
+  "title": "«عندك سؤال؟ اسألنا.» · فاتح",
+  "desc": "أسئلة متل اللي بتوصل عالواتساب، والجواب من Askmed.",
+  "dir": "versions/D-3endak-so2al"
+ },
+ {
+  "key": "E",
+  "title": "«خطوة بخطوة، معك.» · صورة وحدة عالـ 3",
+  "desc": "من التخت، للـ walker، للمشي.",
+  "dir": "versions/E-khotwe-b-khotwe"
+ },
+ {
+  "key": "F",
+  "title": "«خطوة بخطوة، معك.» · نفس E برجّال",
+  "desc": "نفس الفكرة، والعكّازة بدل الـ walker.",
+  "dir": "versions/F-khotwe-b-khotwe-rajol"
+ }
 ]

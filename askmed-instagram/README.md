@@ -4,10 +4,13 @@
 
 ## الـ versions
 
-`G-H-operating-room-recovery.jpg` فيه الـ 2 versions الجداد (غرفة العمليات والتعافي، بكلام professional)، `versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
+`I-J-connected.jpg` فيه الـ versions اللي الـ 3 posts فيها صورة وحدة موصولة، `G-H-operating-room-recovery.jpg` فيه الـ 2 versions الجداد (غرفة العمليات والتعافي، بكلام professional)، `versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
 
 | Version | الفكرة | الملفات |
 |---|---|---|
+| I | صورة وحدة عالتلاتة: من غرفة العمليات إلى البحر | `versions/I-men-ghorfet-el-3amaliyyet-lal-ba7r/` |
+| I2 | نفس I، والتعافي بالبيت | `versions/I2-men-ghorfet-el-3amaliyyet-lal-beit/` |
+| J | خطوة x-ray وحدة بتمرق عالتلاتة | `versions/J-khatwe-wa7de/` |
 | G | «داخل غرفة العمليات»، و«بعد العملية، خلال التعافي» · كحلي | `versions/G-ghorfet-el-3amaliyyet-w-el-ta3afi/` |
 | H | نفس G · أبيض | `versions/H-ghorfet-el-3amaliyyet-w-el-ta3afi-abyad/` |
 | A | «اسأل Askmed» · كحلي | `pinned/` |

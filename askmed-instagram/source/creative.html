@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --deep: #02164a; --ink: #0A2F72; --sky: #63B8F7; --green: #5BB52C; --soft: #CFE3FA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  .pano { position: relative; width: 3240px; height: 1440px; overflow: hidden; font-family: 'Alexandria', sans-serif; color: #fff; background: var(--deep); }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; display: flex; direction: ltr; }
+  .stripe div { flex: 1; }
+  .sep { width: 8px; height: 8px; border-radius: 50%; background: #3aa0da; }
+  .cell { position: absolute; top: 0; height: 120px; width: 1080px; display: flex; align-items: center; justify-content: center; gap: 18px; white-space: nowrap; font-weight: 600; font-size: 36px; color: #E6F0FB; }
+  .cell .lock { display: flex; align-items: center; gap: 14px; direction: ltr; }
+  .cell .lock .i { height: 74px; }
+  .cell .lock .w { height: 44px; }
+
+  /* ---------- I · one scene, operating room to the seafront ---------- */
+  .scene .img { position: absolute; left: 0; top: 330px; width: 3240px; height: 990px; object-fit: cover; object-position: 50% 62%; }
+  .scene .fade { position: absolute; left: 0; top: 330px; width: 3240px; height: 330px; background: linear-gradient(to bottom, var(--deep) 0%, rgba(2,22,74,0.65) 40%, rgba(2,22,74,0) 100%); }
+  .scene .h { position: absolute; top: 96px; width: 1080px; padding: 0 90px; text-align: right; }
+  .scene .h .t { font-size: 96px; font-weight: 900; line-height: 1.3; white-space: nowrap; }
+  .scene .h .t.acc { color: var(--sky); filter: drop-shadow(0 0 30px rgba(99,184,247,0.45)); }
+  .scene .h .s { margin-top: 10px; font-size: 38px; font-weight: 600; color: var(--soft); white-space: nowrap; display: flex; align-items: center; gap: 16px; justify-content: flex-start; }
+  .scene .h .s i { display: inline-block; width: 44px; height: 6px; border-radius: 3px; background: var(--green); }
+  .scene .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; background: var(--deep); }
+
+  /* ---------- J · one stride across the three posts ---------- */
+  .stride .img { position: absolute; left: 0; top: 0; width: 3240px; height: 1440px; }
+  .stride .blk { position: absolute; top: 130px; width: 1080px; padding: 0 100px; text-align: right; }
+  .stride .blk .k { display: inline-flex; align-items: center; gap: 14px; font-size: 38px; font-weight: 700; color: var(--sky); }
+  .stride .blk .k i { display: inline-block; width: 44px; height: 6px; border-radius: 3px; background: var(--sky); }
+  .stride .blk .t { margin-top: 14px; font-size: 104px; font-weight: 900; line-height: 1.28; white-space: nowrap; }
+  .stride .blk .t.acc { color: var(--sky); filter: drop-shadow(0 0 30px rgba(99,184,247,0.45)); }
+  .stride .blk .s { margin-top: 18px; font-size: 38px; font-weight: 500; color: var(--soft); white-space: nowrap; }
+  .stride .mid { position: absolute; left: 1080px; width: 1080px; top: 860px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+  .stride .mid .lock { display: flex; align-items: center; gap: 20px; direction: ltr; }
+  .stride .mid .lock .i { height: 120px; }
+  .stride .mid .lock .w { height: 84px; }
+  .stride .mid .en { font-size: 30px; font-weight: 600; color: var(--sky); }
+  .stride .tag { position: absolute; display: flex; align-items: center; gap: 14px; font-size: 32px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .stride .tag .dot { width: 22px; height: 22px; border-radius: 50%; background: var(--sky); box-shadow: 0 0 0 8px rgba(99,184,247,0.25), 0 0 24px rgba(99,184,247,0.8); }
+  .stride .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: rgba(1,10,40,0.85); }
+</style>
+</head>
+<body>
+
+<!-- ======================= I (seafront) and I2 (home) ======================= -->
+<template id="sceneTpl"></template>
+
+<div class="pano scene" id="I">
+  <img class="img" src="assets/world1.jpg" alt="">
+  <div class="fade"></div>
+  <div class="h" style="left: 2160px"><div class="t">في غرفة العمليات</div><div class="s"><i></i>زرعات وأدوات جراحة العظام</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مستلزمات التعافي والدعامات الطبية</div></div>
+  <div class="h" style="left: 0"><div class="t acc">حتى أولى خطواتك</div><div class="s"><i></i>معك في كل مرحلة، منذ 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+<div class="pano scene" id="I2">
+  <img class="img" src="assets/world2.jpg" alt="">
+  <div class="fade"></div>
+  <div class="h" style="left: 2160px"><div class="t">في غرفة العمليات</div><div class="s"><i></i>زرعات وأدوات جراحة العظام</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مستلزمات التعافي والدعامات الطبية</div></div>
+  <div class="h" style="left: 0"><div class="t acc">حتى أولى خطواتك</div><div class="s"><i></i>معك في كل مرحلة، منذ 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+<!-- ======================= J (stride) ======================= -->
+<div class="pano stride" id="J">
+  <img class="img" src="assets/stride1.jpg" alt="">
+
+  <div class="blk" style="left: 2160px">
+    <div class="k"><i></i>الجراحة</div>
+    <div class="t">داخل<br>غرفة العمليات</div>
+    <div class="s">زرعات وأدوات جراحة العظام</div>
+  </div>
+
+  <div class="blk" style="left: 0">
+    <div class="k"><i></i>التعافي</div>
+    <div class="t acc">حتى أولى<br>خطواتك</div>
+    <div class="s">دعامات ومستلزمات ما بعد العملية</div>
+  </div>
+
+  <div class="mid">
+    <div class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></div>
+    <div class="en ltr">Orthopaedic surgery &amp; recovery · Since 2006</div>
+  </div>
+
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:500">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="cell" style="left: 2160px"><span>جراحة العظام والتعافي</span><span class="sep"></span><span style="font-weight:500">منذ 2006</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+
+</body>
+</html>
