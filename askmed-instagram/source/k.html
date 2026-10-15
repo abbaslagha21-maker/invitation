@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;600;700&family=Almarai:wght@400;700;800&family=Tajawal:wght@500;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --deep: #02164a; --sky: #63B8F7; --green: #5BB52C; --soft: #D6E6FA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  .pano { position: relative; width: 3240px; height: 1440px; overflow: hidden; color: #fff; background: var(--deep); }
+  .f-plex    { --ar: 'IBM Plex Sans Arabic'; --hw: 700; --sw: 500; --hs: 104px; --lh: 1.35; }
+  .f-almarai { --ar: 'Almarai';              --hw: 800; --sw: 400; --hs: 100px; --lh: 1.4;  }
+  .f-tajawal { --ar: 'Tajawal';              --hw: 800; --sw: 500; --hs: 116px; --lh: 1.25; }
+  .pano { font-family: var(--ar), sans-serif; }
+  .ltr { direction: ltr; unicode-bidi: isolate; font-family: 'Manrope', sans-serif; }
+  .img { position: absolute; left: 0; top: 330px; width: 3240px; height: 990px; object-fit: cover; object-position: 50% 62%; }
+  .fade { position: absolute; left: 0; top: 330px; width: 3240px; height: 330px; background: linear-gradient(to bottom, var(--deep) 0%, rgba(2,22,74,0.65) 40%, rgba(2,22,74,0) 100%); }
+  .h { position: absolute; top: 92px; width: 1080px; padding: 0 92px; text-align: right; }
+  .h .t { font-size: var(--hs); font-weight: var(--hw); line-height: var(--lh); white-space: nowrap; letter-spacing: 0; }
+  .h .t.acc { color: var(--sky); }
+  .h .s { margin-top: 14px; font-size: 42px; font-weight: var(--sw); color: var(--soft); white-space: nowrap; display: flex; align-items: center; gap: 18px; }
+  .h .s i { display: inline-block; flex: 0 0 auto; width: 46px; height: 6px; border-radius: 3px; background: var(--green); }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; background: var(--deep); }
+  .cell { position: absolute; top: 0; height: 120px; width: 1080px; display: flex; align-items: center; justify-content: center; gap: 18px; white-space: nowrap; font-weight: 600; font-size: 36px; color: #E6F0FB; }
+  .cell .lock { display: flex; align-items: center; gap: 14px; direction: ltr; }
+  .cell .lock .i { height: 74px; }
+  .cell .lock .w { height: 44px; }
+  .sep { width: 8px; height: 8px; border-radius: 50%; background: #3aa0da; }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; display: flex; direction: ltr; }
+  .stripe div { flex: 1; }
+
+  /* label sits left of the product; the dot on its right end marks the brace */
+  .tag { position: absolute; display: flex; align-items: center; direction: ltr; transform: translateY(-50%); }
+  .tag .line { display: block; width: 70px; height: 3px; background: rgba(255,255,255,0.95); position: relative; }
+  .tag .line::after { content: ""; position: absolute; right: -9px; top: -8px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 6px rgba(99,184,247,0.5); }
+  .tag .pill { direction: rtl; background: rgba(2,22,74,0.9); color: #fff; border-radius: 999px; padding: 14px 30px; font-size: 32px; font-weight: 700; white-space: nowrap; }
+  .tag .pill b { color: #63B8F7; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<div class="pano f-plex">
+  <img class="img" src="assets/world-knee.jpg" alt="">
+  <div class="fade"></div>
+  <div class="tag" style="right: calc(3240px - 548px); top: 930px;"><span class="pill">مشدّ الركبة من <b class="ltr">Askmed</b></span><span class="line"></span></div>
+  <div class="h" style="left: 2160px"><div class="t">بغرفة العمليات</div><div class="s"><i></i>زرعات وأدوات لجراحة العظم</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مشدّات ومستلزمات للتعافي</div></div>
+  <div class="h" style="left: 0"><div class="t acc">لحدّ أوّل خطوة</div><div class="s"><i></i>معك بكل مرحلة، من 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:600">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+<div class="pano f-almarai">
+  <img class="img" src="assets/world-knee.jpg" alt="">
+  <div class="fade"></div>
+  <div class="tag" style="right: calc(3240px - 548px); top: 930px;"><span class="pill">مشدّ الركبة من <b class="ltr">Askmed</b></span><span class="line"></span></div>
+  <div class="h" style="left: 2160px"><div class="t">بغرفة العمليات</div><div class="s"><i></i>زرعات وأدوات لجراحة العظم</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مشدّات ومستلزمات للتعافي</div></div>
+  <div class="h" style="left: 0"><div class="t acc">لحدّ أوّل خطوة</div><div class="s"><i></i>معك بكل مرحلة، من 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:600">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+<div class="pano f-tajawal">
+  <img class="img" src="assets/world-knee.jpg" alt="">
+  <div class="fade"></div>
+  <div class="tag" style="right: calc(3240px - 548px); top: 930px;"><span class="pill">مشدّ الركبة من <b class="ltr">Askmed</b></span><span class="line"></span></div>
+  <div class="h" style="left: 2160px"><div class="t">بغرفة العمليات</div><div class="s"><i></i>زرعات وأدوات لجراحة العظم</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مشدّات ومستلزمات للتعافي</div></div>
+  <div class="h" style="left: 0"><div class="t acc">لحدّ أوّل خطوة</div><div class="s"><i></i>معك بكل مرحلة، من 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:600">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+<div class="pano f-plex">
+  <img class="img" src="assets/world-back.jpg" alt="">
+  <div class="fade"></div>
+  <div class="tag" style="right: calc(3240px - 592px); top: 742px;"><span class="pill">مشدّ الضهر من <b class="ltr">Askmed</b></span><span class="line"></span></div>
+  <div class="h" style="left: 2160px"><div class="t">بغرفة العمليات</div><div class="s"><i></i>زرعات وأدوات لجراحة العظم</div></div>
+  <div class="h" style="left: 1080px"><div class="t">وبعد العملية</div><div class="s"><i></i>مشدّات ومستلزمات للتعافي</div></div>
+  <div class="h" style="left: 0"><div class="t acc">لحدّ أوّل خطوة</div><div class="s"><i></i>معك بكل مرحلة، من 2006</div></div>
+  <div class="bar">
+    <div class="cell" style="left: 0"><span class="ltr">@askmedlb</span><span class="sep"></span><span class="ltr" style="font-weight:600">askmedlb.com</span></div>
+    <div class="cell" style="left: 1080px"><span class="lock"><img class="i" src="assets/icon-white.png" alt=""><img class="w" src="assets/wordmark-white.png" alt="Askmed"></span></div>
+    <div class="cell" style="left: 2160px">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7fd174" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      <span class="ltr">+961 76 103 507</span></div>
+    <div class="stripe"><div style="background:#1f4fa0"></div><div style="background:#3aa0da"></div><div style="background:#3f9a35"></div></div>
+  </div>
+</div>
+</body>
+</html>

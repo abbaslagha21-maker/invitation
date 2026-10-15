@@ -4,10 +4,14 @@
 
 ## الـ versions
 
-`I-J-connected.jpg` فيه الـ versions اللي الـ 3 posts فيها صورة وحدة موصولة، `G-H-operating-room-recovery.jpg` فيه الـ 2 versions الجداد (غرفة العمليات والتعافي، بكلام professional)، `versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
+`K-mashadd-fonts.jpg` فيه آخر version (البنت لابسة مشدّ من Askmed) بـ 3 fonts، `I-J-connected.jpg` فيه الـ versions اللي الـ 3 posts فيها صورة وحدة موصولة، `G-H-operating-room-recovery.jpg` فيه الـ 2 versions الجداد (غرفة العمليات والتعافي، بكلام professional)، `versions-compare.jpg` فيه كل الـ versions جنب بعض، و`highlight-styles.jpg` فيه الـ 3 styles تبع الـ highlights.
 
 | Version | الفكرة | الملفات |
 |---|---|---|
+| K1 | البنت لابسة مشدّ الركبة من Askmed · font IBM Plex Sans Arabic | `versions/K1-mashadd-rekbe-plex/` |
+| K2 | نفس K1 · font Almarai | `versions/K2-mashadd-rekbe-almarai/` |
+| K3 | نفس K1 · font Tajawal | `versions/K3-mashadd-rekbe-tajawal/` |
+| K4 | نفس K1 بس مشدّ الضهر | `versions/K4-mashadd-dahr-plex/` |
 | I | صورة وحدة عالتلاتة: من غرفة العمليات إلى البحر | `versions/I-men-ghorfet-el-3amaliyyet-lal-ba7r/` |
 | I2 | نفس I، والتعافي بالبيت | `versions/I2-men-ghorfet-el-3amaliyyet-lal-beit/` |
 | J | خطوة x-ray وحدة بتمرق عالتلاتة | `versions/J-khatwe-wa7de/` |
